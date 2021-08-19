@@ -16,16 +16,18 @@ plugins {
     id 'java'
 }
 
-group 'magh.springProject'
+group 'com.magh.springboot'
 version '1.0.4-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation 'junit:junit:4.13.1'
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
