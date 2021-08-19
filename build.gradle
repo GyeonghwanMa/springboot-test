@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = "2.1.7.RELEASE"
+        springBootVersion = "2.4.1"
     }
     repositories {
         mavenCentral()
@@ -11,18 +11,18 @@ buildscript {
 }
 
 plugins {
+    id 'org.springframework.boot' version '2.4.1' // RELEASE 삭제
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     id 'java'
-    id 'eclipse'
-    id 'org.springframework.boot' version '2.1.7.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 }
 
 group 'magh.springProject'
-version '1.0-SNAPSHOT'
+version '1.0.4-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
