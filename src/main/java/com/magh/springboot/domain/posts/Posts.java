@@ -21,7 +21,7 @@ public class Posts {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
 
-    private  String author;
+    private String author;
 
     @Builder
     public Posts(String title, String content, String author) {
