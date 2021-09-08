@@ -1,16 +1,24 @@
 package com.magh.springboot.web;
 
 import com.magh.springboot.service.posts.PostsService;
+import com.magh.springboot.web.dto.PostsListResponseDto;
 import com.magh.springboot.web.dto.PostsResponseDto;
 import com.magh.springboot.web.dto.PostsSaveRequestDto;
 import com.magh.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
     private final PostsService postsService;
+
+    @GetMapping("/api/v1/posts")
+    public List<PostsListResponseDto> find() {
+        return postsService.findAllDesc();
+    }
 
     @PostMapping("/api/v1/posts")
     public Long save(@RequestBody PostsSaveRequestDto requestDto) {
