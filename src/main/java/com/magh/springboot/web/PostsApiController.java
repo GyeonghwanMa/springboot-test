@@ -1,5 +1,6 @@
 package com.magh.springboot.web;
 
+import com.magh.springboot.domain.posts.Posts;
 import com.magh.springboot.service.posts.PostsService;
 import com.magh.springboot.web.dto.PostsListResponseDto;
 import com.magh.springboot.web.dto.PostsResponseDto;
