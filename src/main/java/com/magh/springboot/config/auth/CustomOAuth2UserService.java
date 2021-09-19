@@ -5,7 +5,6 @@ import com.magh.springboot.config.auth.dto.SessionUser;
 import com.magh.springboot.domain.user.User;
 import com.magh.springboot.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
