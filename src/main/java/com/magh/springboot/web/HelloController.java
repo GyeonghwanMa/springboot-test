@@ -22,7 +22,7 @@ public class HelloController {
         return new HelloResponseDto(name, amount);
     }
 
-    @CrossOrigin("*")
+//    @CrossOrigin("*")
     @GetMapping("/api/hello")
     public String hello_react(){
 

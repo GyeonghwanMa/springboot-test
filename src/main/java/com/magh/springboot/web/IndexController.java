@@ -15,10 +15,15 @@ public class IndexController {
 
     private final PostsService postsService;
 
-    @GetMapping("/index/get")
-    public List<PostsListResponseDto> index(Model model) {
-        List<PostsListResponseDto> data = postsService.findAllDesc();
-        System.out.println(data.toString());
-        return data;
+    @GetMapping("/")
+    public String index(Model model) {
+        model.addAttribute("posts", postsService.findAllDesc());
+        return "index";
     }
+
+    @GetMapping("/posts/save")
+    public String postsSave() {
+        return "posts-save";
+    }
+
 }
